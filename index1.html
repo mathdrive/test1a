@@ -5,8 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Математичний тест</title>
     
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+   <!-- Настройки MathJax -->
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  }
+};
+</script>
 
+<!-- Подключение MathJax -->
+<script id="MathJax-script" defer
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js">
+</script>
+    <script>
+window.addEventListener('load', () => {
+  MathJax.typesetPromise(); // сразу прогоняем все формулы после загрузки
+});
+</script>
     <style>
     /* Основной стиль вопросов */
 .question {
@@ -1131,8 +1147,6 @@ border-bottom: 1px solid #ccc;
   padding-bottom: 5px;
 
   margin-bottom: 10px;
-
-}
 }
 </style>
 </head>
@@ -2413,7 +2427,7 @@ border-bottom: 1px solid #ccc;
   <div class="results-buttons">
 
     <button id="restart-button" type="button">Пройти тест ще раз</button>
-<a href="http://mathdrive.tilda.ws/page104320376.html">
+<a href="https://mathdrive.github.io/vsi.testi/vsi_testi.html">
     <button id="back-to-list-button" type="button">Перейти до переліку тестів</button>
 
   </div>
